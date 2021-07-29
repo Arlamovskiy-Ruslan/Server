@@ -24,9 +24,9 @@ public class Handler extends Thread {
 
     private static final String NOT_FOUND_MESSAGE = "NOT FOUND";
 
-    private Socket socket;
+    private final Socket socket;
 
-    private String directory;
+    private final String directory;
 
     public Handler(Socket socket, String directory) {
         this.socket = socket;

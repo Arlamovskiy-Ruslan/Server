@@ -1,24 +1,18 @@
 package Server;
 
 import Handler.Handler;
-import jdk.jfr.Configuration;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.ServerSocket;
-import java.net.URL;
 
 public class Server {
 
-    private int port;
+    private final int port;
 
-    private String directory;
-
-    private URL url;
+    private final String directory;
 
     public Server(int port, String directory) {
         this.port = port;
-        this.url = url;
         this.directory = directory;
     }
 
@@ -35,7 +29,7 @@ public class Server {
         }
     }
 
-    public static void main(String[] args) throws MalformedURLException {
+    public static void main(String[] args) {
         var port = Integer.parseInt(args[0]);
         var directory = args[1];
 
